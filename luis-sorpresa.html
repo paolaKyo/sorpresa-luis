@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorpresa para Luis 💕</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', cursive;
+      background: linear-gradient(to bottom right, #fde2e4, #fad2e1, #e2ece9);
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 20px;
+    }
+    .photo {
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      width: 300px;
+      transition: transform 0.5s;
+      cursor: pointer;
+    }
+    .photo:hover {
+      transform: scale(1.05);
+    }
+    h1, h2 {
+      color: #b0235c;
+      font-family: 'Brush Script MT', cursive;
+    }
+    .flowers {
+      display: none;
+      margin-top: 30px;
+    }
+    .flower {
+      display: inline-block;
+      margin: 15px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .flower img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .flower:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+      font-style: italic;
+      padding: 15px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .final-message {
+      display: none;
+      font-size: 28px;
+      font-weight: bold;
+      color: #d6336c;
+      margin-top: 40px;
+      animation: fadeIn 2s forwards, heartbeat 1.5s infinite;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    .date {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #6b2d5c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>De tu: amor 💕</h1>
+    <h2>Para: el amor de mi vida (Luis)</h2>
+    <img src="foto.jpg" alt="Foto de los dos" class="photo" onclick="showFlowers()">
+    <div class="date">Feliz 30 de septiembre 🌻✨🫶</div>
+
+    <div class="flowers" id="flowers">
+      <div class="flower" onclick="showMessage(0)"><img src="https://i.ibb.co/fYb7Fdz/flower1.png"></div>
+
+      <div class="flower" onclick="showMessage(1)"><img src="https://i.ibb.co/ZdZVKhz/flower2.png"></div>
+
+      <div class="flower" onclick="showMessage(2)"><img src="https://i.ibb.co/JzDGzR5/flower3.png"></div>
+
+      <div class="flower" onclick="showMessage(3)"><img src="https://i.ibb.co/0rJCyWM/flower4.png"></div>
+
+      <div class="flower" onclick="showMessage(4)"><img src="https://i.ibb.co/DVG9FBN/flower5.png"></div>
+
+      <div class="flower" onclick="showMessage(5)"><img src="https://i.ibb.co/C0cNw98/flower6.png"></div>
+
+      <div class="flower" onclick="showFinalMessage()"><img src="https://i.ibb.co/k4LKjv0/flower7.png"></div>
+
+    </div>
+
+    <div class="message" id="message"></div>
+    <div class="final-message" id="finalMessage">
+      ✨🥹 No quiero existir en un mundo donde no estés ✨🥹<br>
+      Te amo demasiado 😍❤️
+    </div>
+  </div>
+
+  <!-- Música de fondo -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&loop=1&playlist=2Vv-BfVoq4g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <script>
+    const messages = [
+      "Desde que llegaste a mi vida, todo es más bonito.",
+      "Tú eres mi felicidad hecha persona.",
+      "Amarte es lo más fácil que he hecho en mi vida.",
+      "Eres mi sueño hecho realidad.",
+      "Mi corazón late con fuerza solo por ti.",
+      "Mi vida estaba en blanco y negro, llegaste y la coloreaste con tu sonrisa y tu luz."
+    ];
+
+    function showFlowers() {
+      document.getElementById('flowers').style.display = 'block';
+    }
+
+    function showMessage(index) {
+      const msgBox = document.getElementById('message');
+      msgBox.innerText = messages[index];
+      msgBox.style.display = 'block';
+    }
+
+    function showFinalMessage() {
+      document.getElementById('finalMessage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
